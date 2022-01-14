@@ -7,31 +7,44 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   
   <title>Frontend Mentor | Order summary card</title>
-
+  <link rel="stylesheet" href="main.css">
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+    .attribution { margin-bottom: 2rem;color: hsl(223, 47%, 23%);font-size: 11px; text-align: center; }
+    .attribution a { text-decoration:none;letter-spacing: 2px;color: hsl(228, 45%, 44%); }
   </style>
 </head>
 <body>
+  <!-- SVG Element for making curve background -->
+  <svg id="svg">
+    <path id="curve" d="M0 0 l0 250 Q216 350 512 250 T1024 250 l0 -300 Z" fill="hsl(225, 100%, 92%)"></path>
+  </svg>
 
-  Order Summary
-
-  You can now listen to millions of songs, audiobooks, and podcasts on any 
-  device anywhere you like!
-
-  Annual Plan
-  $59.99/year
-
-  Change
-
-  Proceed to Payment
-  Cancel Order
-  
-  <div class="attribution">
+  <!-- Card Markup -->
+  <main class="card">
+    <div class="hero">
+      <img src="images/illustration-hero.svg" alt="Hero illustration">
+    </div>
+    <div class="card-content">
+      <h1 class="heading">Order Summary</h1>
+      <p class="order-brief">You can now listen to millions of songs, audiobooks, and podcasts on any device anywhere you like!</p>
+      <div class="plan">
+        <img src="images/icon-music.svg" alt="">
+        <span class="plan-type">Annual Plan</span>
+        <span class="plan-price">$59.99/year</span>
+        <a class="change" href="#">Change</a>
+      </div>
+    </div>
+    <div class="card-buttons">
+      <a class="pay-btn" href="#">Proceed to Payment</a>
+      <a class="cncl-btn" href="#">Cancel Order</a>
+    </div>
+  </main>
+  <!-- Footer for attributions -->
+  <footer class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+    Coded by <a href="https://basemamr.github.io/homepage">Basem Amr Elsayed</a>.
+  </footer>
+  <script src="script.js"></script>
 </body>
 </html>
